@@ -1,0 +1,144 @@
+.skills {
+  flex-direction: column;
+  place-items: center;
+  justify-content: center;
+}
+
+.skills__container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 1000px) {
+    flex-direction: row;
+  }
+}
+
+.skills-list {
+  max-width: 25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4rem;
+
+  @media screen and (max-width: 900px) {
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: 900px) {
+    margin-right: 4rem;
+  }
+}
+
+.skills-item {
+  flex-direction: column;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+  img {
+    width: 64px;
+    height: 64px;
+    user-select: none;
+  }
+
+  &:hover {
+    box-shadow: 0 0 45px #fef4f5;
+  }
+
+  p {
+    font-weight: 500;
+    margin-top: 0.5rem;
+  }
+
+}
+
+.skills__exp {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @media screen and (max-width: 900px) {
+    margin-top: 2rem;
+  }
+}
+
+.skills__exp-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+
+
+.skills__exp-work {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  cursor: pointer;
+
+  & h4 {
+    font-weight: 600;
+    font-size: 1.2rem;
+    ;
+    margin: 0rem;
+  }
+
+  p {
+    font-weight: 400;
+    color: var(--gray-color);
+    margin-top: 5px;
+  }
+
+  &:not(:hover) {
+    box-shadow: 0 0 0;
+  }
+}
+
+.skills__exp-year {
+  margin-right: 3rem;
+
+  p {
+    font-weight: 800;
+    color: var(--third);
+  }
+
+  @media screen and (max-width: 450px) {
+    margin-right: 1rem;
+  }
+}
+
+.skills-tooltip {
+  max-width: 300px !important;
+  background-color: var(--white-color) !important;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1) !important;
+  border-radius: 5px !important;
+  padding: 1rem !important;
+  color: var(--gray-color) !important;
+  text-align: center !important;
+  line-height: 1.5 !important;
+  opacity: 1 !important;
+
+
+
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem !important;
+    max-width: 500px !important;
+    line-height: 2 !important;
+  }
+}

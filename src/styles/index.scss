@@ -7,7 +7,7 @@
   --buttonBorderRadius: 50px;
   --transition: all 0.5s ease-in-out;
   --bodyFont: "Proxima Nova", sans-serif;
-  --headingFont: 'Roman', serif;
+  --headingFont: "Proxima Nova", sans-serif;
   --accentFont: 'Momentz', serif;
 }
 
@@ -32,7 +32,7 @@
 @font-face {
   font-family: "Proxima Nova";
   font-style: normal;
-  src: local();
+  src: url(../assets/fonts/ProximaNova.otf);
 }
 
 @font-face {
@@ -99,6 +99,29 @@ section {
   place-items: center;
   overflow-x: hidden;
 
+  & .section-header {
+      max-width: 45rem;
+      margin: 1rem;
+      font-family: var(--accentFont);
+      font-size: 2.75rem;
+      font-weight: 800;
+      text-align: center;
+      color: var(--textColor);
+      text-transform: capitalize;
+    
+      span {
+        color: var(--secondary);
+      }
+    
+      @media screen and (min-width: 2000px) {
+        font-size: 4rem;
+      }
+    
+      @media screen and (max-width: 450px) {
+        font-size: 2rem;
+      }
+  }
+
   &:not(last-of-type) {
     padding-bottom: 3rem;
   }
@@ -162,6 +185,12 @@ a {
   }
 }
 
+.flex {
+  display: flex;
+  justify-content: center;
+  place-items: center;
+}
+
 .mobile {
 	display: flex;
 
@@ -184,37 +213,10 @@ a {
 	}
 }
 
-.prose {
+.p-text {
 	max-width: 45rem;
 	text-align: justify;
-}
-
-.prose-small {
-	max-width: 15rem;
-}
-
-.head-text {
-  font-size: 2.75rem;
-  font-weight: 800;
-  text-align: center;
-  color: var(--black-color);
-  text-transform: capitalize;
-
-  span {
-    color: var(--secondary-color);
-  }
-
-  @media screen and (min-width: 2000px) {
-    font-size: 4rem;
-  }
-
-  @media screen and (max-width: 450px) {
-    font-size: 2rem;
-  }
-}
-
-.p-text {
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: left;
   color: var(--gray-color);
   line-height: 1.5;
