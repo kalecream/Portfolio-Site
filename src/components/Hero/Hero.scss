@@ -1,0 +1,98 @@
+.hero {
+  flex-direction: row;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.hero__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 100%;
+
+  @media screen and (max-width: 1200px) {
+    width: 100%;
+    margin-right: 0rem;
+  }
+}
+
+.hero__badge {
+  width: 100%;
+  margin: 0 auto;
+  margin-left: -2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  & small,
+  & .hero__role {
+    text-transform: uppercase;
+    font-size: 0.6rem;
+
+    &:hover {
+      color: var(--secondary-color);
+      transition: 0.5s;
+    }
+  }
+
+  & h1 {
+    line-height: 1;
+    margin: 0.5rem 0;
+    font-size: 6.5rem;
+    font-family: "Momentz", san-serif;
+    position: relative;
+    will-change: filter;
+    transition: filter 300ms;
+
+    @media screen and (max-width: 800px) {
+      margin: 1rem 0;
+    }
+
+    @media screen and (max-width: 1200px) {
+      margin: 0.5rem 0;
+    }
+  }
+
+  & h1:hover {
+    filter: drop-shadow(0 0 2rem #61dafbaa);
+  }
+
+  & .hero__role {
+    display: inline-block;
+    opacity: 70%;
+  }
+
+  & .hero__role::before {
+    content: "Web Developer";
+    animation: roleAnim 9s infinite;
+  }
+}
+
+@keyframes roleAnim {
+
+  0%,
+  33% {
+    content: "Web Developer";
+  }
+
+  33.34%,
+  66% {
+    content: "Designer";
+  }
+
+  66%,
+  100% {
+    content: "Freelancer";
+  }
+}
+
+.hero__img {
+  height: 75vh;
+  position: relative;
+  bottom: 0;
+  user-select: none;
+}

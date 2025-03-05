@@ -1,0 +1,58 @@
+@import '../../styles/animations';
+@import '../../styles/mediaQuery';
+
+.services {
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+}
+
+.section-header {
+    width: 45rem;
+    font-size: 3rem;
+    text-transform: capitalize;
+    text-align: center;
+    font-weight: 400;
+}
+
+.services-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 1rem;
+    gap: 1rem;
+    place-items: center;
+
+
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-items: center;
+    margin: 0 auto;
+
+    & figure {
+        max-width: 25rem;
+
+        & img {
+            max-width: 350px;
+            border-radius: 10px;
+        }
+    }
+
+    & h3 {
+        line-height: 1;
+        margin: 0;
+        font-size: 1.8 rem;
+    }
+
+    & p {
+        margin: 0;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        max-width: 20rem;
+        text-align: center;
+    }
+}
