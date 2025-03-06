@@ -1,7 +1,6 @@
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import './NavBar.scss';
 import { images } from '../constants';
-import gsap from 'gsap';
 
 const navItems = ['home', 'about', 'work', 'skills', 'contact'];
 
@@ -15,7 +14,6 @@ export function NavLink(props: NavLinkProps) {
 
   return <a {...linkProps}>{props.children}</a>;
 }
-
 
 // const StyledNavLink = ({
 //   isActive,
@@ -45,7 +43,7 @@ const NavBar = () => {
             <>
               <span onClick={() => setToggle(false)} />
               <ul>
-                {['home', 'about', 'work', 'skills', 'contact'].map((item) => (
+                {navItems.map((item) => (
                   <li key={item}>
                     <a href={`#${item}`} onClick={() => setToggle(false)}>
                       {item}
@@ -60,7 +58,6 @@ const NavBar = () => {
     </nav>
   );
 };
-
 
 // const NavBar = () => {
 //   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -134,7 +131,5 @@ const NavBar = () => {
 //     </>
 //   );
 // }
-
-
 
 export default NavBar;
