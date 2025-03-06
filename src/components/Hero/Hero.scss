@@ -1,37 +1,29 @@
 .hero {
   flex-direction: row;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     flex-direction: column;
   }
 }
 
-.hero__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  height: 100%;
-
-  @media screen and (max-width: 1200px) {
-    width: 100%;
-    margin-right: 0rem;
-  }
-}
-
 .hero__badge {
-  width: 100%;
-  margin: 0 auto;
-  margin-left: -2rem;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
+
+  @media screen and (min-width: 1000px) {
+    margin: -20rem auto 0;
+  }
+
+  @media screen and (max-width: 1000px) {
+    margin: -45rem auto 0;
+  }
 
   & small,
   & .hero__role {
     text-transform: uppercase;
-    font-size: 0.6rem;
+    font-size: 0.875rem;
 
     &:hover {
       color: var(--secondary-color);
@@ -41,18 +33,17 @@
 
   & h1 {
     line-height: 1;
-    margin: 0.5rem 0;
-    font-size: 6.5rem;
+    font-size: clamp(5rem, 15vw, 6.5rem);
     font-family: "Momentz", san-serif;
     position: relative;
     will-change: filter;
     transition: filter 300ms;
 
-    @media screen and (max-width: 800px) {
-      margin: 1rem 0;
+    @media screen and (min-width: 1000px) {
+      margin: 0.8rem 0;
     }
 
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1000px) {
       margin: 0.5rem 0;
     }
   }
@@ -63,7 +54,8 @@
 
   & .hero__role {
     display: inline-block;
-    opacity: 70%;
+    opacity: 75%;
+    justify-self: flex-end;
   }
 
   & .hero__role::before {
@@ -90,9 +82,51 @@
   }
 }
 
+.hero__badge-container {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  justify-content: space-between;
+
+}
+
+.social {
+  display: flex;
+  justify-self: flex-start;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+
+  & div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    &:hover {
+      svg {
+        transform: rotate(-15deg);
+      }
+    }
+  }
+}
+
+
 .hero__img {
-  height: 75vh;
-  position: relative;
+  height: 80vh;
+  margin-bottom: -1rem;;
+  position: absolute;
   bottom: 0;
   user-select: none;
+
+  @media screen and (min-width: 1000px) {
+    right: 5%;
+  }
 }
