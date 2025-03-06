@@ -1,3 +1,5 @@
+import '../components/Hero/Hero.scss';
+
 interface IconProps {
   size?: number;
   color?: string;
