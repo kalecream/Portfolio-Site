@@ -3,9 +3,9 @@ import './Services.scss';
 const Services = () => {
   return (
     <section className="services">
-      <h2 className="section-header">
-        I know that <span className="title-highlight">Good Design</span> means{' '}
-        <span className="title-highlight">Good Business</span>
+      <h2 className="section__header" style={{fontFamily: "var(--headingFont)"}}>
+        I know that<br/> <span className="highlight">Good Design</span> means{' '}
+        <span className="highlight">Good Business</span>
       </h2>
       <div className="services-box">
         <div className="service">

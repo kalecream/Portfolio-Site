@@ -56,7 +56,7 @@ const Experiences: ExperienceProp[] = [
 const SkillsComponent = () => {
   return (
     <section className="skills">
-      <h2 className="section-header">Skills & Experiences</h2>
+      <h2 className="section__header">Skills & Experiences</h2>
       <div className="skills__container">
         <div className="skills-list">
           {Skills.map((skill) => (

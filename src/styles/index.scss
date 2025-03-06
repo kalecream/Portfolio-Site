@@ -67,7 +67,7 @@
 
 *::-webkit-scrollbar-track,
 *::-webkit-scrollbar-corner {
-	// background: var(--backgroundColor);
+	background: var(--backgroundColor);
 	background: transparent;
 }
 
@@ -99,31 +99,29 @@ section {
   place-items: center;
   overflow-x: hidden;
 
-  & .section-header {
-      max-width: 45rem;
-      margin: 1rem;
+  & .section__header {
+      margin: 0.5rem;
+      line-height: 1.2;
       font-family: var(--accentFont);
-      font-size: 2.75rem;
+      // font-family: var(--headingFont);
       font-weight: 800;
       text-align: center;
       color: var(--textColor);
       text-transform: capitalize;
     
-      span {
-        color: var(--secondary);
+      & > span.highlight {
+        color: var(--third);
       }
     
-      @media screen and (min-width: 2000px) {
-        font-size: 4rem;
+      @media screen and (min-width: 1000px) {
+        max-width: 55rem;
+        font-size: 3.75rem;
       }
     
-      @media screen and (max-width: 450px) {
-        font-size: 2rem;
+      @media screen and (max-width: 1000px) {
+        max-width: 45rem;
+        font-size: 2.75rem;
       }
-  }
-
-  &:not(last-of-type) {
-    padding-bottom: 3rem;
   }
 
   @include breakpoint-range($from: mobile) {
@@ -139,10 +137,6 @@ section {
 
   @include breakpoint-range($from: desktopSmall) {
     padding: 0;
-
-    &:first-of-type {
-      padding-top: 2rem;
-    }
 
     &:last-of-type {
       padding-bottom: 0rem;
